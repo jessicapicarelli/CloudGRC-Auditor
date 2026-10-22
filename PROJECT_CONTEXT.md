@@ -44,7 +44,7 @@ Status: In progress
 - Evidence-based audit conclusions
 
 ## Architecture
-Status: Pending final approval
+Status: Approved (ADR-001)
 
 Planned components:
 - Terraform laboratory
