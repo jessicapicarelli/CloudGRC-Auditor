@@ -32,7 +32,10 @@ Status: In progress
 - Organization Features: All Features
 - IAM Identity Center: Organization Instance
 - Identity Center Region: us-east-1
-- Identity Center MFA: Pending confirmation
+- Identity Center User: jessica_picarelli
+- Identity Center MFA: Configured and tested
+- Identity Center MFA Policy: Always-on
+- AWS Access Portal Login: Tested successfully with MFA
 - Root MFA: Enabled
 
 ## Approved Security Principles
@@ -59,9 +62,9 @@ Planned components:
 - Legacy local AWS credentials cleared
 - AWS Organizations verified
 - IAM Identity Center instance verified
+- IAM Identity Center MFA configured and tested
 
 ## Pending
-- Confirm Identity Center MFA enrollment
 - Configure AWS account access
 - Validate AWS CLI SSO authentication
 - Review Terraform laboratory
