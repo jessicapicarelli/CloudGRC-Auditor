@@ -28,15 +28,31 @@ Status: In progress
 - AWS Region: us-east-1
 
 ## AWS Environment
+
+### AWS Organizations
 - AWS Organizations: Enabled
 - Organization Features: All Features
+- Management Account: jessicapicarelli
+- Member Account: cloudgrc-lab (Active)
+- Centralized Root Access: Enabled
+- Root MFA: Enabled (Management Account)
+- Member Account Root Credentials: Verification pending (Access denied)
+
+### IAM Identity Center
 - IAM Identity Center: Organization Instance
 - Identity Center Region: us-east-1
 - Identity Center User: jessica_picarelli
 - Identity Center MFA: Configured and tested
 - Identity Center MFA Policy: Always-on
 - AWS Access Portal Login: Tested successfully with MFA
-- Root MFA: Enabled
+
+### AWS Account Access
+- Administrative Permission Set: CloudGRCLabAdmin
+- Permission Set Policy: AdministratorAccess
+- Permission Set Session Duration: 1 hour
+- Permission Set Assignment: cloudgrc-lab
+- Assigned User: jessica_picarelli
+- Member Account Console Access: Tested successfully via IAM Identity Center
 
 ## Approved Security Principles
 - Principle of least privilege
@@ -63,12 +79,16 @@ Planned components:
 - AWS Organizations verified
 - IAM Identity Center instance verified
 - IAM Identity Center MFA configured and tested
+- AWS Member Account created
+- Centralized Root Access enabled
+- Administrative Permission Set created and assigned
+- IAM Identity Center console access to Member Account tested successfully
 
 ## Pending
-- Configure AWS account access
 - Validate AWS CLI SSO authentication
 - Review Terraform laboratory
 - Implement and test infrastructure
+- Verify Member Account root credentials (Access denied during initial verification)
 
 ## Technical Decisions
 Record approved architectural decisions here.
