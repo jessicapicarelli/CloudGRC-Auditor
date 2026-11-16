@@ -91,10 +91,17 @@ Planned components:
 - IAM Identity Center console access to Member Account tested successfully
 - Member Account root password and access keys verified absent via AWS CLI
 - AWS CLI SSO profile configured and authentication tested successfully
+- Terraform laboratory directory initialized (`infra/`)
+- Terraform AWS Provider version requirements configured
+- Terraform initialization validated (`terraform init -backend=false`)
+- Terraform configuration validated (`terraform fmt -check` and `terraform validate`)
+- Terraform dependency lock file committed
 
 ## Pending
 - Review Terraform laboratory
 - Implement and test infrastructure
+- Configure AWS Provider authentication using the cloudgrc-lab-admin SSO profile
+- Define and validate Terraform state management strategy
 
 ## Technical Decisions
 Record approved architectural decisions here.
@@ -103,4 +110,4 @@ Record approved architectural decisions here.
 None confirmed.
 
 ## Next Step
-Review Terraform laboratory configuration and validate infrastructure prerequisites.
+Configure the Terraform AWS Provider to use the cloudgrc-lab-admin SSO profile and validate the target AWS account.
