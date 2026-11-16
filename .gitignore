@@ -218,3 +218,35 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Terraform — local state, sensitive data and generated files
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Variable files (may contain sensitive values)
+*.tfvars
+*.tfvars.json
+
+# Saved Terraform plans
+*.tfplan
+*.tfplan.*
+tfplan
+tfplan.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local Terraform CLI configuration
+.terraformrc
+terraform.rc
+
