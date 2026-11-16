@@ -36,7 +36,7 @@ Status: In progress
 - Member Account: cloudgrc-lab (Active)
 - Centralized Root Access: Enabled
 - Root MFA: Enabled (Management Account)
-- Member Account Root Credentials: Verification pending (Access denied)
+- Member Account Root Credentials: Verified — no root password or access keys (TESTED)
 
 ### IAM Identity Center
 - IAM Identity Center: Organization Instance
@@ -53,6 +53,12 @@ Status: In progress
 - Permission Set Assignment: cloudgrc-lab
 - Assigned User: jessica_picarelli
 - Member Account Console Access: Tested successfully via IAM Identity Center
+- AWS CLI SSO Profile: cloudgrc-lab-admin
+- SSO Session Name: cloudgrc-sso
+- SSO Region: us-east-1
+- Default Client Region: us-east-1
+- CLI Output Format: json
+- AWS CLI SSO Authentication: TESTED (STS GetCallerIdentity successful)
 
 ## Approved Security Principles
 - Principle of least privilege
@@ -83,12 +89,12 @@ Planned components:
 - Centralized Root Access enabled
 - Administrative Permission Set created and assigned
 - IAM Identity Center console access to Member Account tested successfully
+- Member Account root password and access keys verified absent via AWS CLI
+- AWS CLI SSO profile configured and authentication tested successfully
 
 ## Pending
-- Validate AWS CLI SSO authentication
 - Review Terraform laboratory
 - Implement and test infrastructure
-- Verify Member Account root credentials (Access denied during initial verification)
 
 ## Technical Decisions
 Record approved architectural decisions here.
@@ -97,4 +103,4 @@ Record approved architectural decisions here.
 None confirmed.
 
 ## Next Step
-Complete IAM Identity Center authentication setup.
+Review Terraform laboratory configuration and validate infrastructure prerequisites.
