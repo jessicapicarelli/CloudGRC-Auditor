@@ -107,7 +107,19 @@ Planned components:
 - Define and validate Terraform state management strategy
 
 ## Technical Decisions
-Record approved architectural decisions here.
+
+### Terraform Remote State — Approved
+- Backend: Amazon S3
+- AWS Account: cloudgrc-lab
+- AWS Region: us-east-1
+- Encryption: SSE-S3
+- S3 Versioning: Enabled
+- S3 Block Public Access: Enabled
+- State Locking: S3 native locking (`use_lockfile = true`)
+- DynamoDB Locking: Not used
+- Access Control: IAM least privilege
+- Terraform State must not be committed to Git.
+- Status: APPROVED — Not implemented
 
 ## Known Issues
 None confirmed.
