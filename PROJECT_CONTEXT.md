@@ -121,6 +121,19 @@ Planned components:
 - Terraform State must not be committed to Git.
 - Status: APPROVED — Not implemented
 
+
+### Terraform Bootstrap Strategy — Approved
+- Strategy: Separate Terraform configurations for bootstrap and laboratory.
+- Bootstrap responsibility: Provision and protect the S3 remote state backend.
+- Laboratory responsibility: Provision AWS resources for security auditing tests.
+- Bootstrap state: Initially local, requiring secure storage and backup.
+- Laboratory state: Remote Amazon S3 backend with native locking.
+- AWS Account: cloudgrc-lab
+- Planned directories: infra/bootstrap/ and infra/laboratory/
+- Existing Terraform files: Review before relocation.
+- Status: APPROVED — Not implemented
+
+
 ## Known Issues
 None confirmed.
 
